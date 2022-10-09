@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/css/basic.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./asset/css/in_out.css">
+    <link rel="stylesheet" href="./asset/css/find.css">
+    <link rel="stylesheet" href="./asset/css/background.css">
+    <title>AI FOR FUN</title>
+</head>
+<body>
+    <div class="main">
+        <div class="background-animation-container">
+            <div class="background-gradient"></div>
+        </div>
+        <div id ="site-header">
+            <div class="header-info-right">
+                <p>INFO</p>
+            </div>
+        </div>
+        <div id ="site-content">
+            <div class="content-box">
+                <div class="content-box-options">
+                    <div class="content-box-options-item content-box-option-image item-choosed-find btnLine">
+                        <p class="content-box-options-text">IMAGE</p>
+                    </div>
+                    <div class="content-box-options-item content-box-option-text">
+                        <p class="content-box-options-text">TEXT</p>
+                    </div>
+                    <div class="content-box-options-line"></div>
+                </div>
+                <div class="content-box-input">
+                    <div class="content-box-input-image">
+                        <h2 class="content-box-input-image-text">NO IMAGE AVAILABLE</h2>
+                        <form action="" class="content-box-image-upload">
+                            <input type="file" name="image[]" class="content-box-btn-upload hidden">
+                            <div class="content-box-inputzone-image">
+                                <div class="content-box-dropzone-upload-image">
+                                    <p class="content-box-dropzone-upload-text">UPLOAD IMAGE</p>
+                                </div>
+                                <div class="content-box-show-upload-image hidden">
+
+                                </div>
+                            </div>
+                        </form>     
+                    </div>
+                    <div class="content-box-input-text hidden">
+                        <h1 class="content-box-input-text">WRITE HERE</h1>
+                        <form action="">
+                            <input type="text" name="" id="" class="content-box-text-upload" placeholder="Type here..">
+                        </form>
+                    </div>
+                </div>
+                <div class="content-box-find">
+                    <p class="content-box-find-text">FIND BY IMAGE</p>   
+                </div>  
+            </div>
+            <div class="content-box-value hidden">
+                <button class="content-box-value-close">X</button>
+            </div>
+        </div>      
+        <div id ="site-footer"></div>
+    </div>
+    <script src="./asset/js/input.js" type="module"></script>
+    <script src="./asset/js/main.js" type="module"></script>
+    <script src="./asset/js/output.js" type="module"></script>    
+</body>
+</html> 

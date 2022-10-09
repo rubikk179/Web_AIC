@@ -1,0 +1,91 @@
+* {
+    padding: 0; /*create space around an element's content , inside of any defined borders*/
+    margin: 0;   /*create space around elements, outside of any defined borders*/
+    box-sizing: border-box; /*allows us to include the padding and border in a element's total width and height*/
+}
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 15px;
+}
+/* rule */
+.hidden {
+    display: none;
+}
+/* main */
+/* site-header */
+#site-header {
+    height: 46px;
+    position:relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.header-info-right {
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+/* site-content */
+#site-content {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-box {
+    width: 650px;
+    /* height: 500px; */
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: -1px 18px 20px 7px #525356;
+}
+
+.content-box-options-item {
+    padding: 12px 140.6px;
+    width: 50%;
+    cursor: pointer;
+    opacity: 0.7;
+    text-align: center;
+    color: rgb(255 255 255);
+    background-color: rgb(152, 167, 198);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.content-box-options-item:hover {
+    opacity: 1;
+    background-color: rgba(103, 127, 234, 0.877);
+}
+
+.content-box-options {
+    background-color: rgb(166, 162, 162);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.content-box-find--image {
+}
+
+
+.content-box-find--text {
+
+}
+    
+
+.content-box-input-images {
+    
+}
+
+.content-box-input-text {
+    margin-bottom: 12px;
+    font-size: 30px;
+}
