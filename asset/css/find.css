@@ -20,7 +20,7 @@
 
 .content-box-find:hover {
     --p: 100%;
-    --s: calc(50% + 25px);
+    --s: calc(50% + 26px);
     color: #fff;     
 }    
 

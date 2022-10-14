@@ -45,7 +45,7 @@ html {
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* box-shadow: -1px 18px 20px 7px #525356; */
+    box-shadow: rgb(23 71 214) 3px 3px 7px 0px;
     background-color: #31333ce3;
 }
 

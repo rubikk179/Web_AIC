@@ -27,6 +27,7 @@ var dropped = false;
         if(
         file[0].type === "image/jpeg" ||
         file[0].type === "image/png" ||
+        file[0].type === "image/webp" ||
         file[0].type === "image/gif" 
         ){
             contentInputImageText.textContent = file[0].name;           
