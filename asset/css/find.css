@@ -14,6 +14,8 @@
     background-repeat: no-repeat;
     transition: 0.4s ease-in, background-position 0s;
     background-color: #98a7c6;
+    color: #115efe;
+    font-weight: 800;
 }    
 
 .content-box-find:hover {

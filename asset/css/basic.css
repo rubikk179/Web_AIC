@@ -1,7 +1,7 @@
 * {
-    padding: 0; /*create space around an element's content , inside of any defined borders*/
-    margin: 0;   /*create space around elements, outside of any defined borders*/
-    box-sizing: border-box; /*allows us to include the padding and border in a element's total width and height*/
+    padding: 0; 
+    margin: 0;  
+    box-sizing: border-box; 
 }
 html {
     scroll-behavior: smooth;
@@ -25,7 +25,10 @@ html {
 
 .header-info-right {
     margin-right: 50px;
-    font-size: 20px;
+    font-size: 26px;
+    color: #115efe;
+    font-weight: 900;
+    text-shadow: 3px -3px 5px #89898f;
 }
 
 /* site-content */
@@ -39,21 +42,20 @@ html {
 }
 .content-box {
     width: 650px;
-    /* height: 500px; */
-    /* background-color: red; */
     display: flex;
     align-items: center;
     flex-direction: column;
-    box-shadow: -1px 18px 20px 7px #525356;
+    /* box-shadow: -1px 18px 20px 7px #525356; */
+    background-color: #31333ce3;
 }
 
 .content-box-options-item {
     padding: 12px 140.6px;
     width: 50%;
-    cursor: pointer;
-    opacity: 0.7;
+    opacity: 0.5;
     text-align: center;
-    color: rgb(255 255 255);
+    color: #115efe;
+    font-weight: 600;
     background-color: rgb(152, 167, 198);
     cursor: pointer;
     transition: all 0.5s ease;
@@ -61,7 +63,6 @@ html {
 
 .content-box-options-item:hover {
     opacity: 1;
-    background-color: rgba(103, 127, 234, 0.877);
 }
 
 .content-box-options {
@@ -88,4 +89,7 @@ html {
 .content-box-input-text {
     margin-bottom: 12px;
     font-size: 30px;
+    color: #de1051;
+    font-weight: 900;
+    text-shadow: 1px -1px 3px #707076;
 }
