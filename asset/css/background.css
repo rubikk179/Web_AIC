@@ -2,7 +2,7 @@
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url("/asset/images/backgroundImage.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url("../images/backgroundImage.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     z-index: 0;
