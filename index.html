@@ -9,12 +9,22 @@
     <link rel="stylesheet" href="./asset/css/in_out.css">
     <link rel="stylesheet" href="./asset/css/find.css">
     <link rel="stylesheet" href="./asset/css/background.css">
+    <link rel="stylesheet" href="./asset/css/finding_animation.css">
     <title>AI FOR FUN</title>
 </head>
 <body>
     
     <div class="main">
-        <div id="particles-js"></div>   
+        <div class="finding-animation hidden">
+            <span>f</span>
+            <span>i</span>
+            <span>n</span>
+            <span>d</span>
+            <span>i</span>
+            <span>n</span>
+            <span>g</span>
+        </div>
+        <div id="particles-js"></div>  
         <div id ="site-header">
             <div class="header-info-right">
                 <p>INFO</p>
@@ -38,10 +48,17 @@
                             <input type="file" name="image[]" class="content-box-btn-upload hidden">
                             <div class="content-box-inputzone-image">
                                 <div class="content-box-dropzone-upload-image">
-                                    <p class="content-box-dropzone-upload-text">UPLOAD IMAGE</p>
+                                    <div class="content-box-dropzone-upload-text">
+                                        <p>Drop File Here</p>
+                                            <p>- or -</p>
+                                        <p>Click to Upload</p>
+                                    </div>
                                 </div>
                                 <div class="content-box-show-upload-image hidden">
-
+                                    <div class="content-box-show-image-uploaded">
+                                        
+                                    </div>
+                                    <button class="btnClearImageUpload">CLEAR</button>
                                 </div>
                             </div>
                         </form>     
@@ -53,19 +70,64 @@
                         </form>
                     </div>
                 </div>
+                <div class="content-box-input-slider">
+                    <input type="range" min="1" max="100" value="5" class="box-input-slider" id="myRange">
+                    <p class="input-text-slider">Value: <span id="show-value-slider"></span></p>
+                </div>
                 <div class="content-box-find">
                     <p class="content-box-find-text">FIND BY IMAGE</p>   
                 </div>  
             </div>
             <div class="content-box-value hidden">
+                <p>VALUDE</p>
+                <div class="content-box-show-values">
+                    <div class="tagImageValue">
+                        <img src= "./asset/images/backgroundImage.jpg" alt="" class="itemImage">
+                        <p class="indexImage">1</p>
+                    </div>
+                    <div class="tagImageValue">
+                        <img src= "./asset/images/backgroundImage.jpg" alt="" class="itemImage">
+                        <p class="indexImage">1</p>
+                    </div>
+                    <div class="tagImageValue">
+                        <img src= "./asset/images/backgroundImage.jpg" alt="" class="itemImage">
+                        <p class="indexImage">1</p>
+                    </div>
+                    <div class="tagImageValue">
+                        <img src= "./asset/images/backgroundImage.jpg" alt="" class="itemImage">
+                        <p class="indexImage">1</p>
+                    </div>
+                    <div class="tagImageValue">
+                        <img src= "./asset/images/backgroundImage.jpg" alt="" class="itemImage">
+                        <p class="indexImage">1</p>
+                    </div>
+                    <div class="tagImageValue">
+                        <img src= "./asset/images/backgroundImage.jpg" alt="" class="itemImage">
+                        <p class="indexImage">1</p>
+                    </div>
+                    <div class="tagImageValue">
+                        <img src= "./asset/images/backgroundImage.jpg" alt="" class="itemImage">
+                        <p class="indexImage">1</p>
+                    </div>
+                    <div class="tagImageValue">
+                        <img src= "./asset/images/backgroundImage.jpg" alt="" class="itemImage">
+                        <p class="indexImage">1</p>
+                    </div>
+                    <div class="tagImageValue">
+                        <img src= "./asset/images/backgroundImage.jpg" alt="" class="itemImage">
+                        <p class="indexImage">1</p>
+                    </div>
+                </div>
                 <button class="content-box-value-close">X</button>
             </div>
         </div>      
-        <div id ="site-footer"></div>
-    </div>
+        <div id ="site-footer" style="display: none;">            
+        </div>
+        </div>
     <script src="./asset/js/input.js" type="module"></script>
     <script src="./asset/js/main.js" type="module"></script>
-    <script src="./asset/js/output.js" type="module"></script>   
+    <script src="./asset/js/submit.js" type="module"></script> 
+    <script src="./asset/js/show_images.js" type="module"></script>  
     <script src="./copy/particles.js"></script>
     <script src="./copy/app.js"></script>
 </body>

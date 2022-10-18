@@ -1,8 +1,12 @@
 import {inputByText,inputByImage,btnGetByImage,
     btnGetByText,contentInputImage,contentInputImageDropzone,
-    contentInputImageText,contentBoxImage,contentInputImageShowImage,
-    contentInputImageDropzoneImage,contentSubmitText,btnLine
+    contentInputImageText,contentBoxImage,contentInputImageBoxShowImage,
+    contentInputImageDropzoneImage,contentSubmitText,btnLine,
+    contentInputBoxSlider,InputValueSlider,contentInputImageShowImage,
+    contentInputImageClearImage,contentBoxTextValue
 } from "./main.js";
+
+// choosed
 btnGetByImage.addEventListener("click", function() {
     inputByText.classList.add("hidden");
     inputByImage.classList.remove("hidden");
@@ -20,9 +24,9 @@ btnGetByText.addEventListener("click", function() {
     btnLine.style.left =  this.offsetLeft + "px";
 })
 
-// Input image + text
+// Input image
 var dropped = false;
-(function() {   
+function inputImage() {   
     const generateNames = function(file) {
         if(
         file[0].type === "image/jpeg" ||
@@ -37,35 +41,40 @@ var dropped = false;
         }
     };
         
-        contentInputImageDropzone.ondragover = function() {
-            contentInputImageDropzone.classList.add("image-uploading");       
-        }
-        contentInputImageDropzone.ondragleave = function() {
-            contentInputImageDropzone.classList.remove("image-uploading");
-        }
-        var reader = new FileReader();
-        var uploaded_image = "";
+    contentInputImageDropzone.addEventListener('dragover',event => {
+        event.preventDefault();
+        contentInputImageDropzone.classList.add("image-uploading");  
+    })
+             
+    contentInputImageDropzone.addEventListener('dragleave',event => {
+        event.preventDefault();
+        contentInputImageDropzone.classList.remove("image-uploading");
+    })
+    var reader = new FileReader();
+    var uploaded_image = "";
 
-        contentInputImageDropzone.ondrop = function(e) {
-            e.preventDefault(); 
-            dropped = true;
-            contentInputImage.files = e.dataTransfer.files;
-            generateNames(e.dataTransfer.files);
-            reader.addEventListener("load", () => {
-                uploaded_image = reader.result; 
-                contentInputImageShowImage.style.background = `url(${uploaded_image})`; 
-                contentInputImageShowImage.style.backgroundRepeat = "no-repeat";     
-                contentInputImageShowImage.style.backgroundSize = "contain";  
-                contentInputImageShowImage.style.backgroundPosition = "center center";   
-                contentInputImageShowImage.classList.remove("hidden"); 
-            })
-            contentInputImageDropzone.classList.add("hidden");
-            reader.readAsDataURL(contentInputImage.files[0]);
-        }       
-        contentInputImageDropzone.onclick = function(e) {   
-            e.preventDefault();
-            contentInputImage.click();
-        }
+    contentInputImageDropzone.addEventListener('drop',e=> {
+        console.log(1);
+        e.preventDefault(); 
+        contentInputImageDropzone.classList.remove("image-uploading");
+        dropped = true;
+        contentInputImage.files = e.dataTransfer.files;
+        generateNames(e.dataTransfer.files);
+        reader.addEventListener("loadend", () => {
+            uploaded_image = reader.result; 
+            contentInputImageShowImage.style.background = `url(${uploaded_image})`; 
+            contentInputImageShowImage.style.backgroundRepeat = "no-repeat";     
+            contentInputImageShowImage.style.backgroundSize = "contain";  
+            contentInputImageShowImage.style.backgroundPosition = "center center";   
+            contentInputImageBoxShowImage.classList.remove("hidden"); 
+        })
+        contentInputImageDropzone.classList.add("hidden");
+        reader.readAsDataURL(contentInputImage.files[0]);
+    })       
+    contentInputImageDropzone.onclick = function(e) {   
+        e.preventDefault();
+        contentInputImage.click();
+    }
 
         contentInputImage.onchange = function() {
             if(!dropped) {
@@ -77,11 +86,25 @@ var dropped = false;
                 contentInputImageShowImage.style.backgroundRepeat = "no-repeat";     
                 contentInputImageShowImage.style.backgroundSize = "contain";   
                 contentInputImageShowImage.style.backgroundPosition = "center center";  
-                contentInputImageShowImage.classList.remove("hidden"); 
+                contentInputImageBoxShowImage.classList.remove("hidden"); 
             })
             reader.readAsDataURL(contentInputImage.files[0]);
             contentInputImageDropzone.classList.add("hidden");
             dropped = false;
         }
-    }
-)();
+}
+inputImage();
+function clearImage() {
+    contentInputImageShowImage.style.background = undefined;
+    contentInputImageDropzone.classList.remove("hidden");
+    contentInputImageBoxShowImage.classList.add("hidden");
+}
+contentInputImageClearImage.addEventListener("click",event => {
+    clearImage();
+})
+//input text
+//input slider 
+InputValueSlider.innerHTML = contentInputBoxSlider.value;
+contentInputBoxSlider.oninput = function() {
+    InputValueSlider.innerHTML = this.value;
+}
